@@ -1,33 +1,142 @@
-/* Add your custom CSS styles here */
+/* Reset some basic styles for consistency across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body style */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    padding-top: 60px; /* For fixed header */
 }
 
+/* Header style */
 header {
-    background-color: #333;
+    background-color: #444;
     color: #fff;
-    padding: 20px;
+    padding: 20px 0;
     text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Navigation style */
 nav ul {
     list-style: none;
+    padding: 0;
+    text-align: center;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 20px;
+    display: inline-block;
+    margin: 0 15px;
 }
 
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main content style */
 main {
     padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
+/* Video section style */
+#videos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#videos div {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
+}
+
+#videos div h3 {
+    background-color: #444;
+    color: #fff;
+    margin: 0;
+    padding: 10px;
+}
+
+#videos div p {
+    padding: 10px;
+    color: #666;
+}
+
+#videos div a {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    background-color: #444;
+    color: #fff;
+    text-decoration: none;
+    border-top: 1px solid #ddd;
+}
+
+#videos div a:hover {
+    background-color: #555;
+}
+
+/* Footer style */
 footer {
-    background-color: #333;
+    background-color: #444;
     color: #fff;
     text-align: center;
     padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
 
-/* Add more custom styles as needed */
+/* Responsive styles */
+@media (max-width: 768px) {
+    #videos div {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    #videos div {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    header, footer {
+        padding: 15px;
+    }
+
+    main {
+        padding: 15px;
+    }
+}
