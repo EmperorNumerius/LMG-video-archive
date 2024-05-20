@@ -2,13 +2,13 @@ const axios = require('axios');
 const mysql = require('mysql');
 
 // Your YouTube Data API key
-const apiKey = 'YOUR_API_KEY';
+const apiKey = 'AIzaSyBk0zofrYo8qdvKIR_WMyO1hnuRy7f3HqI';
 
 // MySQL database configuration
 const dbConfig = {
   host: 'localhost',
-  user: 'your_user',
-  password: 'your_password',
+  user: 'EmperorNumerius',
+  password: 'Xj9!kL3@dF7#bQ2&nR5',
   database: 'your_database',
 };
 
