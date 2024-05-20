@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Fetch videos from the JSON file
+    // Fetch all videos from the JSON file
     fetch('videos.json')
         .then(response => response.json())
         .then(data => {
