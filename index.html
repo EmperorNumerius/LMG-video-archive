@@ -4,11 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YouTube Channel Archive</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>YouTube Channel Archive</h1>
-    <div id="videos"></div>
-
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>YouTube Channel Archive</h1>
+        <div id="videos"></div>
+    </main>
+    <footer>
+        &copy; 2024 Your Name. All rights reserved.
+    </footer>
     <script>
         fetch('videos.json')
             .then(response => response.json())
@@ -19,8 +33,7 @@
                     videoElement.innerHTML = `
                         <h3>${video.snippet.title}</h3>
                         <p>${video.snippet.description}</p>
-                        <a href="https://www.youtube.com/watch?v=${video.id.videoId}">Watch Video</a>
-                        <hr>
+                        <a href="https://www.youtube.com/watch?v=${video.id.videoId}" target="_blank">Watch Video</a>
                     `;
                     videosDiv.appendChild(videoElement);
                 });
