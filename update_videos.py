@@ -3,7 +3,7 @@ import json
 import os
 
 API_KEY = os.getenv('YOUTUBE_API_KEY')
-CHANNEL_ID = '@SmallishBeans'
+CHANNEL_ID = 'SmallishBeans'
 
 def get_videos(api_key, channel_id):
     base_url = 'https://www.googleapis.com/youtube/v3/'
